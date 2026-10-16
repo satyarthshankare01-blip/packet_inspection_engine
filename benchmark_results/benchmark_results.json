@@ -1,0 +1,96 @@
+{
+  "pcap_file": "benchmark_1m.pcap",
+  "packet_count": 1000000,
+  "file_size_bytes": 87989109,
+  "warmup_runs": 2,
+  "measured_runs": 7,
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12500H",
+  "os": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "timestamp": "2026-10-16T14:41:49Z",
+  "results": {
+    "ST": {
+      "name": "single-threaded",
+      "label": "ST",
+      "times_ms": [
+        1720.18,
+        1714.13,
+        1734.29,
+        1761.89,
+        1684.98,
+        1668.58,
+        1708.15
+      ],
+      "median_ms": 1714.13,
+      "mean_ms": 1713.17,
+      "stdev_ms": 30.76,
+      "min_ms": 1668.58,
+      "max_ms": 1761.89,
+      "packets_per_sec": 583388,
+      "speedup": 1.0,
+      "pct_reduction": 0.0
+    },
+    "MT-1x1": {
+      "name": "mt-1x1 (1 LB, 1 FP)",
+      "label": "MT-1x1",
+      "times_ms": [
+        3813.69,
+        3864.78,
+        3887.93,
+        3806.42,
+        3983.6,
+        4111.49,
+        4039.69
+      ],
+      "median_ms": 3887.93,
+      "mean_ms": 3929.66,
+      "stdev_ms": 117.38,
+      "min_ms": 3806.42,
+      "max_ms": 4111.49,
+      "packets_per_sec": 257206,
+      "speedup": 0.441,
+      "pct_reduction": -126.8
+    },
+    "MT-2x2": {
+      "name": "mt-2x2 (2 LB, 2 FP/LB = 4 FP)",
+      "label": "MT-2x2",
+      "times_ms": [
+        5437.99,
+        5577.98,
+        5712.49,
+        5662.53,
+        5850.5,
+        5732.11,
+        5949.67
+      ],
+      "median_ms": 5712.49,
+      "mean_ms": 5703.32,
+      "stdev_ms": 168.84,
+      "min_ms": 5437.99,
+      "max_ms": 5949.67,
+      "packets_per_sec": 175055,
+      "speedup": 0.3,
+      "pct_reduction": -233.3
+    },
+    "MT-2x3": {
+      "name": "mt-2x3 (2 LB, 3 FP/LB = 6 FP)",
+      "label": "MT-2x3",
+      "times_ms": [
+        4747.24,
+        4442.62,
+        5082.15,
+        4691.84,
+        4856.84,
+        4923.85,
+        4770.43
+      ],
+      "median_ms": 4770.43,
+      "mean_ms": 4787.85,
+      "stdev_ms": 200.09,
+      "min_ms": 4442.62,
+      "max_ms": 5082.15,
+      "packets_per_sec": 209625,
+      "speedup": 0.359,
+      "pct_reduction": -178.3
+    }
+  }
+}
